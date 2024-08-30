@@ -1,0 +1,45 @@
+CSS Selector
+1. .className			/같은 클래스 여러개 가능
+2. #idName			/하나의 유니크한 아이디
+
+Attribute Selector
+1. p[draggable]
+2. p[draggable="false"]	
+
+Universal Selector
+1. *				/다선택
+___________________________________________________________________
+
+color
+mdn-named color
+
+font-size
+1.px
+2.em				/부모의 폰트사이즈에의해 결정됨, 만약 부모폰트가 40px 이고 2em 이면 80px
+3.rem				/가장 최초의 (보통 html 태그인 루트의) 폰트사이즈를 따름 
+
+font-family
+1.구글폰트			/링크 html 파일에 복붙
+
+text-align
+1.center
+2.left
+3.right
+
+___________________________________________________________________
+
+developer tool
+other tools>>CSS overview
+style
+elements
+___________________________________________________________________
+
+Box Model (Margin, Padding, Border)
+1. height, width: 100%		 
+2. border: 10px, solid, black			/두께 (두꺼워질때 바깥쪽을향해 두꺼워져서 안의 면적은 변함없음), 스타일, 색깔
+	border-top: 0px
+	border-width: 0px 10px 20px 30px	/두께 / 값이 4개일시 clock-wise / 값이 2개일시 <상하>,<좌우>
+3. padding:					/패딩은 내부 element 와 안쪽 border 사이의 간격
+4. margin:					/마진은 바깥쪽 border 와 외부 element 사이의 간격
+5. div:						/마진+패딩+보더= 엘레멘트일때, 엘레멘트들을 구분해주는 컨테이너역할 
+6. pesticide for chrome + ctrl			/그리드를 보여줌

@@ -1,0 +1,21 @@
+1.<h1>,<h2>			/header
+	
+2.<p>				/paragraph
+
+3.<hr />			/horizontal line
+
+4.<br />				/break line
+
+5.<ul>				/unordered list
+    <li>
+</ul>
+
+6.<ol start="5">		/ordered list
+    <li>
+</ol>
+
+7.<a href="target">		/anchor
+
+8.<img src="url" alt="text"/>	/image
+
+9.
