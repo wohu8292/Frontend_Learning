@@ -43,3 +43,22 @@ Box Model (Margin, Padding, Border)
 4. margin:					/마진은 바깥쪽 border 와 외부 element 사이의 간격
 5. div:						/마진+패딩+보더= 엘레멘트일때, 엘레멘트들을 구분해주는 컨테이너역할 
 6. pesticide for chrome + ctrl			/그리드를 보여줌
+
+___________________________________________________________________
+
+Cascading				/아래에서 위로
+1. position				/파란색이 실행됨
+{color:red
+color: blue}
+
+2. Specifity				/아이디-어트리뷰트-클래스-태그 순
+
+3. type					/inline-internal-external 순
+<link rel="stylesheet" href=" ">	/external	
+<style></style>				/internal
+<h1 style="color:blue">			/inline /다른 h1이 있어도 이 h1에만 적용됨
+
+4. importance
+{color: green !imporatnt;}		/치트키
+
+
