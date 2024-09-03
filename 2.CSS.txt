@@ -61,4 +61,97 @@ color: blue}
 4. importance
 {color: green !imporatnt;}		/치트키
 
+___________________________________________________________________
 
+1. selector, another selector {}	/여러개선택자선택
+2. parent > child {}			/부모>바로아래자식
+3. ancestor  descendent			/조상의 하위중에서
+4. h1.selector.selector			/모든조건에 충족하는 요소, 처음체인은 항상 태그로
+5. parent h1.selector			/위에것들을 섞어쓸수있음
+
+___________________________________________________________________
+
+Position
+1. Static				/default
+2. Relative				/static (디폴트) 에서 상대적으로 움직임
+3. Absolute				/relative to nearest positioned ancestor / 포지션지정된 ancestor 가 없을경우 홈페이지의 윗 왼쪽 구석 / 상대의 상대적
+4. Fixed 				/
+
+z-index: -1				/디폴트 z 값은 0임 , 그래서 -1로설정하면 가장뒤로
+
+___________________________________________________________________
+
+Display
+1.block				/ height 과 width 를 정할수있음, 한줄에하나
+2.inline			/ 엘리멘트들이 한줄에 여러개들어갈수있음, 
+3.inline-block			/ 인라인+블락
+4.none				/ 엘리멘트 숨김
+
+___________________________________________________________________
+
+Float
+1.Float: left, right		/ float은 엘리먼트 (이미지)가 블록일때 문단(p)으로 감싸고싶으면 이미지에 씀 / 틀을 만들땐 좋은게 많기때문에 안씀
+2.clear: left, right		/ float의 영향을받아 줄바꿈이된 엘리먼트에 클리어를 쓰면 영향을 받지않게됨
+___________________________________________________________________
+
+Responsive Website
+1.@media(){}			/ 미디어쿼리
+2.CSS grid			/ 디스플레이: 플렉스, 그리드
+3.Bootstrap Framework		/ 프레임워크라 빌트인임, 12개로 쪼개져있어 class="card col-6", class="card col-2", class="card col-4" 이런식
+
+___________________________________________________________________
+
+Media Query
+1.@media(max-width: 600px){}				/ 600px 이거나 이하일시 다음 조건으로 실행됨
+2.@media(min-width: 600px){}				/ 600px 이거나 이상일시 다음 조건으로 실행됨
+3.@media(min-width:600px) and (max-width:600px)		/ 600~900px 사이
+4.@media sceen()
+
+___________________________________________________________________
+
+Flexbox
+1.display: flex						/ gap 이랑 세트임
+2.모든 태그는 고유의 display 디폴트값이 있는데, flexbox 안에 놓이게되면 자유로워짐
+3..container{display: inline-flex}			/flexbox는 기본적으로 block 특성인데 인라인 플렉스로 바꾸면 다른 flexbox 도 같은줄에 올수있음
+		
+Flex-Direction
+1..container{flex-direction: row, column}		/flex-direction 의 디폴트값인 row 로 정렬되있을때 row 는 main-axis 이고 column 은 cross-axis임
+2..child{flex-basis: 100px}				/auto 가 디폴트 (짧은문장엔 짧은 basis, 긴문장엔 긴basis) ,일정하고싶다면 0
+3..child{order:10}					/0이 디폴트인 다른것에 order 가 없다면 10이 가장 후번이므로 마지막에옴
+4..container{flex-wrap: nowrap, wrap}			/nowrap 은디폴트고 엘리먼트가 플렉스박스를 넘어갈때 줄바꿈이되지않음, wrap 은 줄바꿈이됨
+5..container(justify-content: flex-start, flex-end, center, space-between, space evenly)
+6..container{align-items: flex-start, st, height:70vh}	/justify-content 는 main-axis 를 따르지만 align items 는 cross-axis 를 따름, 70% 의 cross-axis 방향 페이지   	
+7..child{align-self: flext-start, stretch, baseline}	/이것만 선택해서 align-items 지정		 
+8..container{align-content: center}			/flex-wrap: wrap 일때만 사용할수있음, center 일때 줄이 `바뀐후의 틀자체가 중앙으로 감
+
+Flex Sizing
+1. max-width/min-width> flex-basis> width> content width	/min-width 는 페이지 축소해도 그이하로는 shrink 되지 않음
+2..child{flex-grow:0,1, flex-basis:100px}		/기본사이즈가 100일때 0이면 안늘어남, 1이면 100이상일시 늘어남 (max-width 까지)
+3..child(flex-shrink:0,1, flex-basis:100px}		/기본사이즈가 100일때 0이면 안줄어듦, 1이면 100이하일시 줄어듦 (min-width 까지),
+4.flex:1 1 0						/grow-shrink-basis
+5.flex:1, flex:2, flex:3				/1:2:3
+
+___________________________________________________________________
+
+Grid
+1.display: grid
+.container{grid-template-rows: repeat(2,200px)}				/2*3 
+.container{grid-template-columns: repeat(3,100px)}			/2*3 밖에있는 그리드는 사이즈 적용이 안될거임
+2.display: grid	
+.container{grid-template-rows: 1fr 1fr 2fr}				/세로가 1:1:2 비율
+.container{grid-template-columns: auto 400px minmax(200px, 500px)}	
+.container{grid-auto-rows: 50px}					/그리드 범위 밖에있는 템플릿의 사이즈
+
+Grid Placement
+1.child{grid-column: span 2}						/grid-column 은 아래 두 프로퍼티를 한군데 합쳐서 쓰는거임
+.child{grid-column-start: span 2, grid-column-end:auto}			/가로 span 2에서 시작해서 자동으로 양옆으로 늘림
+.child{grid-area:2/1/3/3}						/그리드기준으로 row-start/column-start/row-end/column-end 으로 배치
+.child{order:1}								/order:1 을달면 다른 엘리먼트들의 디폴트 order 값인 0보다 크기때문에 가장오른쪽으로 가게됨
+.child{grid-row: span 2}						/span 2 는 그리드를 나누는 행 열 선이다
+
+ ___________________________________________________________________
+
+Bootstrap			/파운데이션이나 에니메이트같은 프레임워크도 있음
+1.단점
+structure 랑 style 랑 구분되있어야되는데 그러질못함
+디테일하게 디자인하고싶으면 프레임워크는 안됨
