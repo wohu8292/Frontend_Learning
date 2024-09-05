@@ -1,6 +1,5 @@
 1. $("h1") = document.querySelector("h1")		/ $()는 jQuery()의 줄임말임
 2. JS 에서는 document.getElementsBy 이런식으로 여러개와 한개의 엘리멘트를 구분하지만 Jquery는 구별하지 않음
-3. 
 
 $("h1").css("font-size", "5rem")
 $("h1").addClass("big-title addmargin")			/ 엘리먼트에 클래스명 추가
@@ -10,3 +9,33 @@ $("h1").hasClass("big-title")				/ 엘리먼트에 클래스 있는지없는지 
 $("h1").text("Bye")					/ 엘리먼트에 텍스트 추가/대체
 $("button").html("<em>Hey</em>")			/ 엘리먼트에 html 태그랑 텍스트 추가/대체
 
+$("a").attr("href","https://www.yahoo.com")		/ 엘리먼트에 어트리뷰트 추가/대체
+
+$("h1").click(function(){				/ 이벤트리스너, 단순히 콜백함수 넣주면됨
+  $("h1").css("color", "purple")
+})
+____________________________
+
+$("input").keypress(function(event){			/ 키보드 입력값있으면 콘솔에 로그
+  console.log(event.key)
+})
+
+$("h1").on("mouseover", function(){			/ 마우스 호버하면 색깔변경 / on(eventName, callbackFunction)
+  $("h1").css("color","purple")
+})
+
+$("h1").before("<button>New</button>")			/ 태그 뒷줄에 엘리멘트 생성 / 뒤는 after
+$("h1").prepend("<button>New</button>")			/ 태그 안쪽의 앞에 엘리멘트 생성 / 뒤는 append
+
+____________________________
+
+$("button").on("click", function(){			/ hide / toggle / fadeOut / fadeToggle / slideUp / slideToggle / 
+  $("h1").hide();
+})
+
+$("button").on("click", function(){			/ 본인설정 css로 애니메이션실행시킴
+  $("h1").animate({opacity: 0.5})
+})
+
+
+____________________________

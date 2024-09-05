@@ -1,0 +1,48 @@
+Form
+
+input 들을 감싸는 태그
+<form action="/action_page.php" method="post">
+
+action: form 이 전송되야할 url
+method: get, post.... 
+_____________________________________________________________
+
+Text Input
+
+<form>
+  <label for="fname"> ~ </label>
+  <input type="text" id="fname" name="fname" placeholder="unreal text" value="text" maxlength="8"/>
+  
+  <label for="pwd> ~ </label>
+  <input type="password" id="pwd" name="pwd"/>
+
+  <input type="submit" value="SUBMIT"/>
+  <input type="reset" value=""RESET/>
+</form>
+_____________________________________________________________
+
+RadioButton & CheckBox Input
+
+<form>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html"> HTML </label> 
+
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css"> CSS </label>
+</form>
+_____________________________________________________________
+
+etc: button, color, date, datetime-local, email, image, file, hidden, number, 
+_____________________________________________________________
+
+id vs name
+
+id
+1. 중복사용 불가, 주로 JS 에서 사용됨
+2. document.getElementById(id)
+3. id로 설정된 값은 파라미터로서 서버로 보낼 수 없기 때문에 서버에서 접근이 불가하다.
+
+name
+1. 중복사용 가능
+2. action에 해당하는 페이지 또는 서버에 전달할 수 있는 파라미터 (name 값을 key로 해서 value를 전송)
+3. 서버 단에서 request.getParameter(parameterName)으로
