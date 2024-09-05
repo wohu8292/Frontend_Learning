@@ -152,6 +152,24 @@ Grid Placement
  ___________________________________________________________________
 
 Bootstrap			/파운데이션이나 에니메이트같은 프레임워크도 있음
-1.단점
-structure 랑 style 랑 구분되있어야되는데 그러질못함
-디테일하게 디자인하고싶으면 프레임워크는 안됨
+1.단점						/structure 랑 style 랑 구분되있어야되는데 그러질못함/ 커스톰 디자인하고싶을때 디테일 못살림
+2.How to use?			
+ -헤드에 CDN 링크추가 
+ -doc 가서 필요한거 복붙
+ -body 마지막에 스크립트 복붙
+
+부트스트랩 12 레이아웃
+<div class="row">							/한줄에 12임
+    <div class="col-lg-6 col-sm-12">Column 1</div>			/large 사이즈 이상에서는 6/3/3
+    <div class="col-lg-3 col-sm-6">Column 2</div>			/small 사이즈 이상부터는 12 다음줄 6/6
+    <div class="col-lg-3 col-sm-6">Column 3</div>
+
+부트스트랩 컴포넌트
+svg 파일 (icon)
+class="nav-item mb-2"							/mb-2 는 margin-bottom-size2 를 뜻함
+<html lang="en" data-bs-theme="dark">					/다크모드
+
+___________________________________________________________________
+
+그외 
+visibility: hidden

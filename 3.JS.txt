@@ -1,0 +1,77 @@
+변수
+1. var				/changeable, global
+2. let				/changeable, block
+3. const			/strict
+
+*****************************************************************
+
+어레이
+var arrayName = [15,15,23,37];
+arrayName[2]				/23
+arrayName.length			/4
+
+arrayName.push()			/끝에 추가
+arrayName.pop()				/끝에 제거
+arrayName.unshift(3)			/첨에 추가
+arrayName.indexOf(15,2)			/두번째 15의 위치, 결과값:1
+arrayName.includes(29)			/있으면 트루 없으면 펄스				
+arrayName.slice(1,3)			/중간값 잘라넣기 [15,23]
+arrayName.slice(-3)			/마지막에서 세번째 인덱스 잘라넣기
+
+*****************************************************************
+
+함수의 종류
+
+1. 선언적함수 (hoisting: 순서대로 되지 않기때문에 일반적으로 사용되진 않음)
+	function Name(){
+		console.log('Hello')
+	}
+			또는
+	Name = ()=>{
+		console.log('Hello')
+	}	
+
+2. 익명함수
+	let Name = function(){
+		console.log('Hello')
+	}
+
+3. 즉시실행함수 (일회용 함수)
+
+	(function() {console.log("hello");})();
+			또는
+	(()=> {console.log("Hello")})();
+
+
+*****************************************************************
+
+메서드
+자바에서 메서드: 클래스안에 정의된 
+자스에서 메서드: 객체안에 프로퍼티로 정의된 함수
+
+let user = {						//user 라는 객체에 
+	name: "john",
+	age:30
+}
+
+객체안에 메소드 추가하는법 #1
+user={
+	sayHi(){alert("hello")}
+}
+
+*****************************************************************
+
+주사위
+var n = Math.random()			/0~0.999999999
+n = n*6
+n = Math.floor(n)+1
+
+*****************************************************************
+
+콜백함수
+hello(goodbye)				/괄호 넣지마, 즉시 실행하기위해서
+function hello(callback){		/함수를 load-up
+	console.log("hello")
+	callback()
+}
+

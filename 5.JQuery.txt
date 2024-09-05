@@ -1,0 +1,5 @@
+$("h1") = document.querySelector("h1")		/ $()는 jQuery()의 줄임말임
+
+$(document).ready(function(){
+	$("h1") = css("color", "red") 
+})

@@ -1,0 +1,18 @@
+ document.firstElementChild					/DOM 의 첫번째 세대를 보여줌
+document.getElementsByTagName("li")[2]				/태그로 선택
+document.getElementsByClassName("btn")				/클래스네임으로 선택
+document.getElementById("title")				/아이디로 선택
+
+document.querySelector("li.item")				/셀렉터로 선택 / 한엘리멘트의 여러항목으로 디테일하게 specify 할때는 노 스페이스
+document.querySelectorAll("li item")				/복수
+
+document.querySelector("button").classList.add("invisible")	/invisible 이라는 클래스명 추가
+document.querySelector("button").classList.remove("invisible")	/invisible 이라는 클래스명 제거
+document.querySelector("button").classList.toggle("invisible")	/invisible 이라는 클래스명이 없으면 추가, 있으면 제거
+
+document.getElementById("title").innerHTML = "Good Bye"		/안에있는 태그까지 리턴
+document.getElementById("title").textContent = "Hello"		/그냥 텍스트만 리턴
+
+document.querySelector("a").attributes
+document.querySelector("a").getAttribute("href")
+document.querySelector("a").setAttribute("href", "https:~")	/어트리뷰트 변경
