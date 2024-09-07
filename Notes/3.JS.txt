@@ -25,10 +25,6 @@ arrayName.slice(-3)			/마지막에서 세번째 인덱스 잘라넣기
 1. 선언적함수 (hoisting: 순서대로 되지 않기때문에 일반적으로 사용되진 않음)
 	function Name(){
 		console.log('Hello')
-	}
-			또는
-	Name = ()=>{
-		console.log('Hello')
 	}	
 
 2. 익명함수
@@ -69,9 +65,15 @@ n = Math.floor(n)+1
 *****************************************************************
 
 콜백함수
-hello(goodbye)				/괄호 넣지마, 즉시 실행하기위해서
+hello(goodbye)				/괄호 ㄴㄴ, 즉시 실행하기위해서
 function hello(callback){		/함수를 load-up
 	console.log("hello")
 	callback()
 }
+
+*****************************************************************
+기타
+setTimeout(function, 3000)
+toUpperCase()
+
 
