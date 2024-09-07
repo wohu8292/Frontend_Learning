@@ -10,9 +10,11 @@ let maximum = Math.max(...numbers)
 
 let username = "Bro Code"
 let letters = [...username].join("-")
-// result: [ 'Bro Code' ]
-// join 전: ['B', 'r', 'o',' ', 'C', 'o','d', 'e'] 
-// ... 없을때: B-r-o- -C-o-d-e
+console.log(letters)
+// ... 없을때: [ 'Bro Code' ]
+// ... 있을때: ['B', 'r', 'o',' ', 'C', 'o','d', 'e']
+// join result: B-r-o- -C-o-d-e 
+
 
 //////////////////////////////////////////////////
 

@@ -1,0 +1,24 @@
+Rendering HTML to JS
+
+- npm create vite@latest > ~ > npm run dev
+- jxs 파일: js 안의 html 안의 js ...
+- import React from "react"			/ compiler 가 html -> js
+- {} = interpret html to js expression, but statement
+	<h1>Hello {name+"_ "+comment}</h1>
+    	<h1>Hello {`${name}, ${comment}`}</h1>
+- className="~"					/ specifying jsx file
+- jxs attribute 는 camelCase			/ html 은 no camelcase
+- <h1 style = {{color: "red"}}>			/ string 대신 js Object which is {}, and html 에서 js 표현하려면 {}
+	inline 스타일링 사용할때: css object value 를 자주 바꿔야할때
+
+- component: allow us to split up large file into smaller components
+	<FunctionName />			/ component tag
+- component로 나누는법
+	1.jsx 파일 생성
+	2.import React from "react"
+	3.export default FunctionName		/ component 함수 생성후
+	4.main 파일로 돌아와서 import FunctionName from "./~.jsx"			/확장자는 optional
+
+- Props
+	html 태그와 attribute 는 하나의 object 같다 ex) input.placeholder		/ 이떄 placeholder 는 Prop 의 key
+	component 태그에서 attribute 설정 > component 함수에서 argument 로 attribute 의 props 받음 > {props.placeholder} 
