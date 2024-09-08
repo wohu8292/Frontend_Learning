@@ -11,7 +11,7 @@ Rendering HTML to JS
 - <h1 style = {{color: "red"}}>			/ string 대신 js Object which is {}, and html 에서 js 표현하려면 {}
 	inline 스타일링 사용할때: css object value 를 자주 바꿔야할때
 
-- component: allow us to split up large file into smaller components
+- component: really reusable & allow us to split up large file into smaller components
 	<FunctionName />			/ component tag
 - component로 나누는법
 	1.jsx 파일 생성
@@ -21,4 +21,10 @@ Rendering HTML to JS
 
 - Props
 	html 태그와 attribute 는 하나의 object 같다 ex) input.placeholder		/ 이떄 placeholder 는 Prop 의 key
-	component 태그에서 attribute 설정 > component 함수에서 argument 로 attribute 의 props 받음 > {props.placeholder} 
+	render 함수의 component 태그에서 attribute 설정 > component 함수의 argument 로 attribute 정보가담긴 props 받음 > 컴포넌트 html 에서 {props.placeholder} 
+	className 도 component 태그의 attribute 가 될수있음
+-ReactDeveloperTool: react 의 DOM tree (구조) 를 볼수있음 > rendered by, 건네받은 props의  attribute info 볼수있음
+-Data 가담긴 array.property 를 component 의 attribute 로 담을때
+	name={data[0].name}			/이런식으로 Array of object 에서 하나씩 노가다로 꺼내기보다는
+	data.map(createCard)			/매핑으로 콜백함수 사용해 object 에있는 property 들 한번에 변수에 할당
+ 	콜백함수에 key={data.id}			/유니크한 property 가 필요함. 그냥 리액트 rule임
