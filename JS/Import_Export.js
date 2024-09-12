@@ -1,5 +1,5 @@
-//module.exports 는 require
-//export 는 import from
+//module.exports 는 require (CJS = commonJS)
+//export 는 import from (ESM = module)
 
 const lastName="Huh"
 

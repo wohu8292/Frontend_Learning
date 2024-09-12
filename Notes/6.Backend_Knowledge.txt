@@ -1,0 +1,7 @@
+nodeJS gave freedom to JS
+
+- node: runtime environment				/node is what enabled us to use JS on a computer, not just limited to within the browser
+- NPM (Node Package Manager)		
+	- get access to the world of open source modules
+	- preBundled with node
+	- npm init (configuration file 생성) > npm install > node module 에 다운로드되있음
