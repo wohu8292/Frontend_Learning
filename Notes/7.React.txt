@@ -1,11 +1,11 @@
 Rendering HTML to JS
+- npm create vite@latest > ~ > npm run dev		/ 서버 실행
+- npm install 									/ node 모듈 다운
 
-- npm create vite@latest > ~ > npm run dev
 - jxs 파일: js 안의 html 안의 js ...
 - import React from "react"				/ compiler 가 html -> js
 - {} = interpret html to js expression, but statement
-	<h1>Hello {name+"_ "+comment}</h1>
-    	<h1>Hello {`${name}, ${comment}`}</h1>
+	변수, 함수, prop, 
 - className="~"							/ specifying jsx file
 - jxs attribute 는 camelCase			/ html 은 no camelcase
 - <h1 style = {{color: "red"}}>			/ string 대신 js Object which is {}, and html 에서 js 표현하려면 {}
@@ -30,11 +30,12 @@ Rendering HTML to JS
  	콜백함수에 key={data.id}			/유니크한 property 가 필요함. 그냥 리액트 rule임
 - html 에서 {} 로 rendering 할경우
 	- statement 는안됨
-	- 그래서 	ternary operator		/expression?expression:expression
-	- 또는 &&							/좌측이 true 일경우 && 우측이 실행됨
+	- 그래서 	ternary operator		/expression?expression:expression/ boolean
+	- 또는 &&							/좌측의 조건에 && 우측이 실행됨
 
 - Declartive programming				/isDone=true
-- Hook						/re렌더링 해결하기위해 씀 
+- Hook						/re렌더링 해결하기위해 씀
+	- on-click=function
 	- functional component 안에서만 씀
  	- const [count,stateufulSetter] = useState(5)		/state 는 [initial state which is 5, stateufulSetter], destructure
 	- 따로함수를 만들어서 setCount 함수를 실행시켜야함
