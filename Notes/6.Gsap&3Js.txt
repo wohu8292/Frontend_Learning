@@ -1,0 +1,4 @@
+GSAP
+- required dependencies: react, react-dom, react-router-dom
+- npm install gsap @gsap/react
+
