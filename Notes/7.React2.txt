@@ -1,0 +1,19 @@
+- useEffect(()=> {})					/rendering 될때마다 실행		
+	- useEffect 실행되는 condition을 제한하고싶다면: dependency array
+	- useEffect(()=>{}, [])				/empty array: 맨처음 rendering 됬을때 오직 한번
+	- useEffect(()=>{}, [count])		/count 가 rendering 됬을때 + value 가 바뀌었을때
+	- useEffect 마무리하고싶을땐 return ()=>{
+		clearInterval(timer)  
+	}
+
+- useRef: const ref = useRef(value)			/훅을쓰면 {current: value} 이런 object 로 반환됨
+	- ref 값은 rendering 되어도 value 가 유지됨				/var 은 rendering 하면 다시 초기화됨
+	- component 의 attribute 에 ref 추가하면 current 에 모든 component 정보가 추가되고,
+		useEffect 에서 inputRef.current.focus() 할수있음
+
+- useContext: share globally used data with every component 		/props drilling 필요없음
+	- use only when you really need inputRef			
+		- useContext make it hard to reuse component
+		- if props drilling is only reason, consider using component composition first
+
+-  
