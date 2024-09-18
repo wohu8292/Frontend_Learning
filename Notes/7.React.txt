@@ -43,3 +43,6 @@ Rendering HTML to JS
 - hook vs classes				/class 가 더 복잡함
 - 같은 훅이 사용될경우				/useState() 에서 initial value 대신에 객체를 넣어줌
 	- don't try to access event inside a stateufulSetter		/you should have it from outside const {value, name} = event.target
+
+- const[list, setList]
+	- function name(){setList(argument 는 list 의 현재 state 값)=>{}}

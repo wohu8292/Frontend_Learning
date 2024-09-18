@@ -1,6 +1,7 @@
 // map = apply callback function to each elements of array, than return a new array
+// map vs forEach: forEach doesn't return newArray
 
-function square(element){
+function square(element, index, array){            // map 의 콜백함수에서 parameter 은 자동으로 element, index
     return Math.pow(element, 2)
 }
 

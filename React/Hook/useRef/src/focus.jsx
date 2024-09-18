@@ -4,14 +4,13 @@ import { useRef } from "react"
 function Focus(){
     //useRef
     const inputRef = useRef()
-
     //useEffect
     useEffect(()=>{
         inputRef.current.focus()
     },[])
 
     //function
-    function login(){
+    function login(){ 
         alert(`hello ${inputRef.current.value}!`)
     }
 

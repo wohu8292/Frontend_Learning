@@ -6,8 +6,9 @@
 		clearInterval(timer)  
 	}
 
-- useRef: const ref = useRef(value)			/훅을쓰면 {current: value} 이런 object 로 반환됨
-	- ref 값은 rendering 되어도 value 가 유지됨				/var 은 rendering 하면 다시 초기화됨
+- useRef: const ref = useRef(value)			/훅을쓰면 {current: value} 이런 object 로 반환됨 / cold inlet 
+	- state 가 너무 자주바뀌어서 rendering 이 자주되면 성능에 안좋기때문에 ref 씀
+	- ref 값은 다른 state 에의해 rendering 되어도 value 가 유지됨				/var 은 rendering 하면 다시 초기화됨
 	- component 의 attribute 에 ref 추가하면 current 에 모든 component 정보가 추가되고,
 		useEffect 에서 inputRef.current.focus() 할수있음
 
@@ -16,4 +17,11 @@
 		- useContext make it hard to reuse component
 		- if props drilling is only reason, consider using component composition first
 
--  
+- useMemo: const name = useMemo(()=> {return}, [])		/ 시간이 오래걸리는 state 를 value 가 변할때만 실행시키고싶을때 사용
+		- useMemo(()=> {}, [])			/ dependency array 에 들어간 state 에 value 가 변할경우 실행 (필요할때만 실행)
+		- object 가 렌더링될때	   		/ object 는 rendering 될때마다 주소값이 바뀌어서 useEffect 실행안됨: 이때 useMemo
+
+- useCallback: 							/ useMemo 는 rendering 될때 기존 state value 를 유지하지만 useCallback 은 function Object 를 유지함
+		- JS 에서 function 은 object 이고 rendering 될때마다 object 의 새로운주소값이 변수에 할당됨: memory waste
+
+- useReducer:		
