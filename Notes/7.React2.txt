@@ -1,3 +1,7 @@
+- rendering vs mounting
+	- component 가 처음 rendering 될때 mount 과정을 거침
+	- 그러나 state 가 변경되어 rendering 될때는 mount 과정을 거치지않음
+
 - useEffect(()=> {})					/rendering 될때마다 실행		
 	- useEffect 실행되는 condition을 제한하고싶다면: dependency array
 	- useEffect(()=>{}, [])				/empty array: 맨처음 rendering 됬을때 오직 한번

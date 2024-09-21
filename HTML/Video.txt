@@ -1,0 +1,3 @@
+<video autoPlay loop muted playsInline={true} key={videoSrc}>
+    <source src={videoSrc} type='video/mp4'/>
+</video>

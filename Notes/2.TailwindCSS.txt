@@ -1,0 +1,19 @@
+width: w-full, w-screen
+
+height: h-5/6,
+
+background-color: bg-black, 
+
+flex: flex-col, 
+
+pointer-event: pointer-event-none
+
+overflow: overflow-hidden
+
+margin: mb-12, ml-2
+
+minimum: sm: md: lg: 
+
+font: font-medium
+
+backdrop-filter: backdrop-blur-sm

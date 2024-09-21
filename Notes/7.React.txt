@@ -4,6 +4,7 @@ Rendering HTML to JS
 
 - jxs 파일: js 안의 html 안의 js ...
 - import React from "react"				/ compiler 가 html -> js
+- rafce									/ react arrow function component export / React snippets extension
 - {} = interpret html to js expression, but statement
 	변수, 함수, prop, 
 - className="~"							/ specifying jsx file

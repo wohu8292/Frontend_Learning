@@ -25,3 +25,15 @@ var name3 = ()=>{
     console.log("hello, World3")
 }
 name3()     // work
+
+//////////////////////////////////////////////
+
+const objectName = [
+    {id:1, bookName:"wonderland"},
+    {id:2, bookName:"tree"}
+]
+
+// {} 대신 () 가 들어가면 direct return
+objectName.map((object, index)=>(
+    <div key={object.id}></div>
+))
