@@ -1,0 +1,10 @@
+DEMO
+animation: .5s linear 1s infinite alternate slidein;
+
+direction: normal, reverse, alternate
+state: running paused
+easing: ease-in, ease-out, ease-in-out
+animation-timing-function: linear, steps(5, end)
+
+animation delay: 2s
+animation duration: 3s

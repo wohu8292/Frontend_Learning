@@ -15,6 +15,7 @@
 	- ref 값은 다른 state 에의해 rendering 되어도 value 가 유지됨				/var 은 rendering 하면 다시 초기화됨
 	- component 의 attribute 에 ref 추가하면 current 에 모든 component 정보가 추가되고,
 		useEffect 에서 inputRef.current.focus() 할수있음
+	- putting arrow function into ref attribute: 
 
 - useContext: share globally used data with every component 		/props drilling 필요없음
 	- use only when you really need inputRef			

@@ -175,3 +175,6 @@ ___________________________________________________________________
 visibility: hidden
 overflow: hidden
 z-index: 3                      /z-index auto,1,2 인 다른 component 보다 위
+backdrop-filter: blur(4px)
+transform: translateX(10rem)
+line-height: 50px
