@@ -2,3 +2,7 @@ GSAP
 - required dependencies: react, react-dom, react-router-dom
 - npm install gsap @gsap/react
 
+
+ThreeJS
+- npm install three @react-three/drei @react-three/fiber
+
