@@ -1,0 +1,3 @@
+// Slide Menu
+import {ScrollMenu, VisibilityContext} from 'react-horizontal-scrolling-menu'
+    <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>

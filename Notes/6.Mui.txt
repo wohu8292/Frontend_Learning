@@ -1,0 +1,6 @@
+{Box, Button, Stack, TextField, Typography, Pagination} from '@mui/icons-material'
+
+<Buttoon sx={{fontSize: {lg:'20px', xs:'14px'}}}
+    - inline-styleing vs sx:
+        inline-style 은 props 객체에 포함되기때문에 성능적으로 낭비임, 가급적 사용 x
+        sx 말고도 더 좋은 방법이있음. 

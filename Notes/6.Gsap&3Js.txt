@@ -3,6 +3,3 @@ GSAP
 - npm install gsap @gsap/react
 
 
-ThreeJS
-- npm install three @react-three/drei @react-three/fiber
-

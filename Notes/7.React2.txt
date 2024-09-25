@@ -11,9 +11,10 @@
 	}
 
 - useRef: const ref = useRef(value)			/훅을쓰면 {current: value} 이런 object 로 반환됨 / cold inlet 
-	- state 가 너무 자주바뀌어서 rendering 이 자주되면 성능에 안좋기때문에 ref 씀
+	- state 가 너무 자주바뀌어서 rendering 이 자주되면 성능에 안좋기때문에 ref 
+	- Treat refs as an escape hatch
 	- ref 값은 다른 state 에의해 rendering 되어도 value 가 유지됨				/var 은 rendering 하면 다시 초기화됨
-	- component 의 attribute 에 ref 추가하면 current 에 모든 component 정보가 추가되고,
+	- component 의 attribute 에 ref 추가하면 Accessing DOM elements				/ html 에 id 를붙여 접근하는것처럼
 		useEffect 에서 inputRef.current.focus() 할수있음
 	- putting arrow function into ref attribute: 
 
@@ -30,3 +31,5 @@
 		- JS 에서 function 은 object 이고 rendering 될때마다 object 의 새로운주소값이 변수에 할당됨: memory waste
 
 - useReducer:		
+
+- useParams: 
