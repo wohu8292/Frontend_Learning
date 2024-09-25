@@ -1,0 +1,5 @@
+- React Router
+    - {BrowserRouter}: 기본
+    - {MemoryRouter}: url 이 안바뀌어서 test 할때 좋음
+    - {StaticRouter}: When you need to render React components on the server side to improve performance
+    

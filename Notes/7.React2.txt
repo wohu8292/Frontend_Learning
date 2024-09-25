@@ -22,6 +22,9 @@
 	- use only when you really need inputRef			
 		- useContext make it hard to reuse component
 		- if props drilling is only reason, consider using component composition first
+		1. export const ThemeContext = createContext(null)
+		2. 부모 Component 로 와서 <ThemeContext.Provider value={{isDark, setDark}}> 태그로 자식 Component 감싸줌
+		3. 자식 Component 에서 필요한 parameter 들 const{isDark} = useContext(ThemeContext)
 
 - useMemo: const name = useMemo(()=> {return}, [])		/ 시간이 오래걸리는 state 를 value 가 변할때만 실행시키고싶을때 사용
 		- useMemo(()=> {}, [])			/ dependency array 에 들어간 state 에 value 가 변할경우 실행 (필요할때만 실행)
@@ -32,4 +35,4 @@
 
 - useReducer:		
 
-- useParams: 
+- useParams: return object of custom parameter we defined
