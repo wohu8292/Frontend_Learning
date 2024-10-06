@@ -3,3 +3,11 @@
     - {MemoryRouter}: url 이 안바뀌어서 test 할때 좋음
     - {StaticRouter}: When you need to render React components on the server side to improve performance
     
+- React Prop                                        /param 의 타입을 미리 지정해 오류방지
+    - npm install prop-types
+    - functionName.propTypes={
+        name: PropTypes.string,
+        age: PropTypes.number.isRequired            /isRequired: 무조건 파라미터 넘겨줘야됨
+    - PropTypes.node                                /renderable 인지 체크
+    - children: PropTypes.element.isRequired        /components has to have "one" child
+    }

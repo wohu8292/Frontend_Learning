@@ -73,7 +73,7 @@ ___________________________________________________________________
 
 Position
 1. Static				/default
-2. Relative				/static (디폴트) 에서 상대적으로 움직임
+2. Relative				/static (디폴트) 에서 상대적으로  / 보통 포지션 absolute 에 포지션값을 주기위해 사용
 3. Absolute				/relative to nearest positioned ancestor / 포지션지정된 ancestor 가 없을경우 홈페이지의 윗 왼쪽 구석 / 상대의 상대적
 4. Fixed 				/
 
@@ -127,7 +127,7 @@ Flex-Direction
 Flex Sizing
 1. max-width/min-width> flex-basis> width> content width	/min-width 는 페이지 축소해도 그이하로는 shrink 되지 않음
 2..child{flex-grow:0,1, flex-basis:100px}		/기본사이즈가 100일때 0이면 안늘어남, 1이면 100이상일시 늘어남 (max-width 까지)
-3..child(flex-shrink:0,1, flex-basis:100px}		/기본사이즈가 100일때 0이면 안줄어듦, 1이면 100이하일시 줄어듦 (min-width 까지),
+3..child{flex-shrink:0,1, flex-basis:100px}		/기본사이즈가 100일때 0이면 안줄어듦, 1이면 100이하일시 줄어듦 (min-width 까지),
 4.flex:1 1 0						/grow-shrink-basis
 5.flex:1, flex:2, flex:3				/1:2:3
 
@@ -171,6 +171,13 @@ class="nav-item mb-2"							/mb-2 는 margin-bottom-size2 를 뜻함
 
 ___________________________________________________________________
 
+::Before and ::After
+1. h1::after{
+    context: 'hello'
+    background: 'red'
+    position: absolute
+}
+___________________________________________________________________
 그외 
 visibility: hidden
 overflow: hidden
