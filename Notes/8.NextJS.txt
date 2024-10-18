@@ -1,0 +1,45 @@
+- why nextJS?
+    - can handle SSR                
+        - sending page to client if all the task is done on the server side, 그런데 JS 와 연결되지않아 사용자와 상호작용 불가능
+        - process of attaching JavaScript behavior to HTML elements (by sending to js bundle) => hydration
+        - no hydartion -> server Component       // fileName.server.js // effect 와 state X
+        - hydration -> client Component         // fileName.client.js
+    - filename become path
+    - API routes, can create API endpoints
+    - automatic code splitting
+
+- SSR vs CSR
+    -1990: MPA (multipage application), static site          
+        -링크 클릭할때마다 서버에서 html 파일 받아옴
+        -blink, 성능이슈               
+    -1998: Ajax
+        -XMLHttpRequest 객체를 사용해 reload only necessary part => improve performance              
+        -js 로 동적으로활용
+        -no history management, security issue, server issue
+    -2005: SPA (single page application) 
+        -don't need reload              
+        -google maps
+    -CSR (client side rendering)
+        -SPA (갱신될 부분에서만 데이터요청해 렌더링) use CSR METHOD
+        -blank html 을 서버에서 받고 여기에 링크된 js 파일을 다움로드함
+        -react,vue
+        -initial loading may take too long, so NEED TO CONSIDER TTV
+            -TTFB(Time to first byte, 요청하고 응답이 도착하기까지의 시간) 에선 좋지만
+            -FCP(First contentful paint, 사용자가 컨텐츠를보는 첫지점) 에선 별로임
+        -low search engine optimization performance
+        -path: get blank index file from server - request js    
+    -SSR (server side rendering)
+        -MPA (변경사항이있을때마다 페이지요청해 렌더링) use SSR METHOD
+            - 요쳥즉시 서버에서 HTML 파일 만든다 => SSR
+            - 미리만든 정적 페이지를 제공한다 => SSG (STATIC SITE GENERATION)
+        -blinking issue
+        -server side overhead
+        -need to wait before interacting, so NEED TO CONSIDER TTI
+            - FCP(First contentful paint) 에선 좋지만
+            - TBT: FCP ~ TTI(Time to interaction) 에서는 좋지않음
+        -path: get complete index file from server 
+    -Universal Rendering (CSR+SSR)           , 
+    
+    -npm run dev: development 
+    -npm run build: build
+    -npm run start: run on actual next js server

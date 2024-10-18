@@ -1,0 +1,23 @@
+-address shortcoming of JavaScript
+    pros
+    -typescript is disciplined and robust
+    -javascript with type checking (static typing)
+    -refactoring
+    -large project
+
+    cons
+    -need transpilation (.ts-> compiler-> .js)
+    -simple project
+
+-how to install
+    -1. npm i -g typescript
+    -2. tsc --init
+        -outDir: where your js file is going to be stored in this path
+        -rootDir: where your ts file is stored
+        -removeComments:
+        -noEmitOnError:
+        
+        -sourceMap
+
+-debugging
+    -

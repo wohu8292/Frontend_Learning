@@ -2,4 +2,10 @@ GSAP
 - required dependencies: react, react-dom, react-router-dom
 - npm install gsap @gsap/react
 
+- gsap.registerPlugin(ScrollTrigger)
+- scrollTrigger:{
+    trigger:" ",
+    toggleActions:" "               / play, pause, resume, reverse, restart, reset, complete, none
+    start:"top center"              / object 의 top 이 화면의 center 에왔을때 trigger / 
+}
 

@@ -11,3 +11,15 @@
     - PropTypes.node                                /renderable 인지 체크
     - children: PropTypes.element.isRequired        /components has to have "one" child
     }
+
+- React Icon
+    - npm install react-icons
+    - 1. import { IconName } from "react-icons/fa6";
+    - 2. <Fa0 />
+
+- Google Font
+    - 1. css 에다 @import
+    - 2.   theme: {
+            extend: {
+                fontFamily: {
+                    'cursive': ["Edu AU VIC WA NT Dots", "cursive"]

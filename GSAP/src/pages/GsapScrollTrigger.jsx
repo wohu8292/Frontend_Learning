@@ -8,19 +8,22 @@ gsap.registerPlugin(ScrollTrigger)
   // TODO: Implement the gsap scroll trigger
   const GsapScrollTrigger = ()=>{
     const scrollRef = useRef();
+    
 
     useGSAP(()=>{
+      //ref 가 전달된 태그의 자식 태그들
       const boxes = gsap.utils.toArray(scrollRef.current.children)
+      console.log(boxes)
 
       boxes.forEach((box)=>{
         gsap.to(box, {
-          x: 150,
+          x: 100,
           rotation:360,
           borderRadius:"100%",
           scale:1.5,
           scrollTrigger:{
             trigger: box,
-            start:'bottom, bottom',
+            start:'bottom bottom',
             end:'top 20%',
             scrub:true
           },
