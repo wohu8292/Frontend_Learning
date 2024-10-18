@@ -20,4 +20,6 @@
         -sourceMap
 
 -debugging
-    -
+    -"preLaunchTask": "tsc: build - directoryName/tsconfig.json"
+
+-type: any, unknown, never, enum, tuple

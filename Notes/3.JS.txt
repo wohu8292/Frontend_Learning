@@ -75,5 +75,6 @@ function hello(callback){		/함수를 load-up
 기타
 setTimeout(function, 3000)
 toUpperCase()
+parseInt()
 
 
