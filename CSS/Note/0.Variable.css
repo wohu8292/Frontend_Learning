@@ -1,0 +1,12 @@
+:root{
+    /* hsl: (hue, saturation%, lightness%) */
+    --clr-neutral-200: 210 46% 95%;
+    /* hex color */
+    --clr-light: #f1f5f9;
+    --clr-slate: #94a3b8;
+}
+
+body{
+    background-color: var(--clr-light);
+    color: hsl(var(--clr-neutral-200));
+}

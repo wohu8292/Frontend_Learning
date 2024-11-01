@@ -1,0 +1,14 @@
+asynchronous: tasks or operations can occur independently of the main program flow
+    - useful when dealing with tasks that take time
+    - fetching data from an external API or reading files, 
+    because it allows the program to keep running without freezing.
+
+promise: unknown object that represents the eventual completion (or failure) of an asynchronous operation
+    - It has 3 states: pending, fulfilled, rejected
+    - 
+
+
+fetch return promise        
+result.json().then(json=>{
+    setTemp(json.current.temp_f)
+})

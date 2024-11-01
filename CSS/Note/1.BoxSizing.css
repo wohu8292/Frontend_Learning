@@ -1,0 +1,18 @@
+/* border-x: 50+700+50 = 800 */
+.box1 {
+    box-sizing: content-box;
+    width: 700px;
+    height: 300px;
+
+    padding: 50px;
+}
+
+/* border-x: 50+600+50 = 700 *
+/* border+padding+content */
+.box2 {
+    box-sizing: border-box;
+    width: 700px;
+    height: 300px;
+
+    padding: 50px;
+}

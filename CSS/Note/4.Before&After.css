@@ -1,0 +1,15 @@
+div{
+    position: relative;
+    width: max-content;
+}
+
+div::after{
+    content: '';
+    background: linear-gradient(to right, red, blue);
+    border-radius: 100px;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

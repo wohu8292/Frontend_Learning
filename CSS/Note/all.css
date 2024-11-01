@@ -1,0 +1,30 @@
+:root{
+    --clr-neutral-200: 210 46% 95%;
+    --clr-light: #f1f5f9;
+}
+
+______________________________________________________
+
+/*  <div class="test">
+        <div class="quote" />
+    </div> */
+.test .quote{
+    font-weight: 100;
+}
+
+/* <div class="test quote"> */
+.test.quote{
+    font-weight: 100;
+}
+______________________________________________________
+
+body{
+    margin-inline: 5% 10%;
+    padding-block: 10px 20px;                   
+    writing-mode: horizontal-tb;
+
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 10%;
+}
+
