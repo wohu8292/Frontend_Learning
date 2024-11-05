@@ -27,12 +27,21 @@
 		3. 자식 Component 에서 필요한 parameter 들 const{isDark} = useContext(ThemeContext)
 
 - useMemo: const name = useMemo(()=> {return}, [])		/ 시간이 오래걸리는 state 를 value 가 변할때만 실행시키고싶을때 사용
-		- useMemo(()=> {}, [])			/ dependency array 에 들어간 state 에 value 가 변할경우 실행 (필요할때만 실행)
-		- object 가 렌더링될때	   		/ object 는 rendering 될때마다 주소값이 바뀌어서 useEffect 실행안됨: 이때 useMemo
+	- useMemo(()=> {}, [])			/ dependency array 에 들어간 state 에 value 가 변할경우 실행 (필요할때만 실행)
+	- object 가 렌더링될때	   		/ object 는 rendering 될때마다 주소값이 바뀌어서 useEffect 실행안됨: 이때 useMemo
 
 - useCallback: 							/ useMemo 는 rendering 될때 기존 state value 를 유지하지만 useCallback 은 function Object 를 유지함
-		- JS 에서 function 은 object 이고 rendering 될때마다 object 의 새로운주소값이 변수에 할당됨: memory waste
+	- JS 에서 function 은 object 이고 rendering 될때마다 object 의 새로운주소값이 변수에 할당됨: memory waste
 
-- useReducer:		
+- useReducer: state 관리를위한 또다른 훅
+	- reducer: 은행 / dispatch: 철수 / action: 요구
+	- const [money, dispatch] = useReducer(reducer, 0)
+	  const [number, setNumber] = useState(0)
+	  // update 된 state 를 리턴함
+	  const reducer = (state, action) => {//보통 if else 나 switch(action.type) 문을 많이씀 }
+	  
+	  // type 요구할내용의 description, action 은 보통 object 형태로 보냄
+	  <button onClick={()=>{dispatch({type: "deposit", payload: number})}}		
+
 
 - useParams: return object of custom parameter we defined

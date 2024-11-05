@@ -1,3 +1,13 @@
-// Slide Menu
-import {ScrollMenu, VisibilityContext} from 'react-horizontal-scrolling-menu'
-    <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
+
+
+//typewriter-effect
+import Typewriter from 'typewriter-effect';
+
+<Typewriter
+  options={{
+    strings: ['Hello', 'World'],
+    autoStart: true,
+    loop: true,
+    deletSpeed: 10
+  }}
+/>

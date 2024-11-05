@@ -1,0 +1,25 @@
+.btn{
+    &:focus{}
+    &:hover{}
+    &:active{}
+}
+
+_______________________________________________________________
+
+.button{                        //.button .success
+    .success{
+        color:green
+    }
+}
+
+_______________________________________________________________
+
+@mixin flex-column($color, $bg) {
+    display: flex;
+    color: $color
+    background: $bg;
+}
+
+.card{
+    @include flex-column(black, orange);
+}
