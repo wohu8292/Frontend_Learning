@@ -23,12 +23,14 @@ function useCallback1(){
 
     return(
         <div>
-            <input 
+            <inputx
             type="number"
             value={number}
             onChange={(e)=>setNumber(e.target.value)} />
 
-            <button>{toggle.toString()}</button>
+            <button onClick={()=>setToggle(!toggle)}>
+                {toggle.toString()}
+            </button>
 
             <button onClick={someFunction}>Call someFunc</button>
         </div>

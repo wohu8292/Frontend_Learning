@@ -1,3 +1,6 @@
+//동기 vs 비동기
+
+
 fetch('https://reqres.in/api/users')
     .then(res=>{
         if(res.ok){

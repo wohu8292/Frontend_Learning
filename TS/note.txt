@@ -1,0 +1,95 @@
+리액트에서
+    -npx create-react-app my-app --template typescript
+    
+_______________________________________________________________________________
+
+tsc name.ts
+node hello.js
+
+1.npm install -g typescript
+
+2.tsconfig.json 생성: tsc --init
+    -rootDir: "./src"
+    -outDir: "./build"
+    -noEmitOnError: true
+    
+    함수
+    -noUnusedParameter: true               //함수에서 사용안된 파라미터없어야됨
+    -noImplicitReturn: true                 //to avoid returning undefined
+    -noUnusedLocals: true                   //함수에서 사용안된 변수없어야됨
+
+3.npm install nodemon concurrently
+
+4.package.json file 생성: npm init -y 
+    -"script": {
+        "start:build": "t sc -w",               //watch 모드로 typescript 컴파일할때 콘솔에서 확인할거임
+        "start:run": "nodemon build/index.js"
+        "start": "concurrently npm:start:*"     //start 로시작하는 명령 :buiuld 와 :run 을 동시에하겠다
+    }
+
+_______________________________________________________________________________
+
+debuging
+
+1.package.json file 에서 "sourceMap": true
+2.set red starting point
+3.debug> launch.json> "preLaunchTask" 세팅
+
+_______________________________________________________________________________
+
+function
+
+function CalculateTax(income:number, taxYear=2022)      //2022 will be default value if value is not given
+    -또는 if((taxYear||2022))
+    -또는 taxYear?:number                               //optional
+
+type Employee={
+    readonly id:number,
+    name:string,
+}
+_______________________________________________________________________________
+
+React 에서 사용하기
+
+const App:React.FC=()=>{
+    let data:Restaurat={object}
+    const[myRestaurant, setMyRestaurant]=useState<Restaurant>(data)     //specify generic
+
+    return(
+        <div>
+            <Store myRestaurant={myRestaurant}
+        </div>
+    )
+}
+
+---------------------------
+
+1.interface OwnProps{
+    myRestaurant:Restaurant
+    changeAddress(address:Address):void
+}
+
+2.interface OwnProps extends Menu{                  //기존의 type 에서 더함
+    add moreover type in Menu
+}
+
+3.type OwnProps = Menu & {                          //기존의 type 에서 더함
+    add Morover type in Menu
+}
+
+4.interface OwnProp extends Omit<Menu, 'price'>         //기존의 Menu type 에서 price 제거
+
+5.type AddressWithoutZip = Omit<Address, 'zipCode'>     //기존의 Address type 에서 zipCode 제거
+
+7.type RestaurantOnlyCategory = Pick<Restaurant, 'category'>        //기존의 Restaurant type 에서 category 선택
+
+const Store:React.FC<OwnProps>=({myRestaurant})=>{
+    <div>
+        {myRestaurant.name}
+    </div>
+}
+
+_______________________________________________________________________________
+
+api 에서 사용하기
+
