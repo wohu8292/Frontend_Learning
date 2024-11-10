@@ -1,0 +1,22 @@
+execute js outside of browser: runtime env which is node
+    -node is not language, framework
+    -asynchronous: synchronous (wait, more hardware)
+
+node:
+    -thread handle request
+    -asynchronous / non-blocking is default (node has only single thread) / serving manything at the same time
+    -when DB prepare result, it put message in event queue
+    -ideal for I/O intensive app
+    -there's no window or document object
+    -can get information of os, 
+        work with file, 
+        network, 
+        listen for HTTP request,
+
+
+event:
+    -something that has happened
+    -const EventEmitter = require('events')         //it's class
+        const emitter = new EventEmitter()          //create object
+        emitter.emit                                //making noise, produce- signalling
+

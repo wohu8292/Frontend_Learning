@@ -1,0 +1,5 @@
+npm: install module one by one
+yarn: at the same time
+
+yarn add react          /npm install react
+yarn remove react       /npm uninstall react

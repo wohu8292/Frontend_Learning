@@ -14,12 +14,15 @@ const App = () => {
     <Routes location='/books'>
         <Route path='/books' element={<h1>Extra Contents</h1>}/>
     </Routes>
+
     <nav>
         <ul>
-            <li><Link to='/'>Home</Link></li>
+          {/* login 하고 뒤로가기할때 이전페이지로 다시가고싶지않으면 replace */}
+            <li><Link to='/' replace>Home</Link></li>   
             <li><Link to='/books'>Books</Link></li>
         </ul>
     </nav>
+  
     <Routes>
         <Route path='/' element={<Home/>}/> 
         <Route path='/books/*' element={<BookRoutes/>} />
