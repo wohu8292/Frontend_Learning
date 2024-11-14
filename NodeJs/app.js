@@ -1,7 +1,7 @@
 const path = require('path')
 const os = require('os')
 const fs = require('fs')
-const EventEmitter = require('events')
+const Logger = require('./logger')
 
 var pathObj = path.parse(__filename)
 //  {
@@ -26,10 +26,10 @@ fs.readdir('./', (err, files)=>{
     }
 })
 
-const emitter = new EventEmitter()
+//will use "extends EventEmitter" from Logger class
+const logger = new Logger()         
 //register listener (you can use addListener instead of on)
-emitter.on('messageLogged', (e)=>{
+logger.on('messageLogged', (e)=>{
     console.log('listener called', arg)
 })
-//trigger an event (put name of event)
-emitter.emit('messageLogged', {id:1, url: 'https://'})           
+logger.log('message')

@@ -19,4 +19,5 @@ event:
     -const EventEmitter = require('events')         //it's class
         const emitter = new EventEmitter()          //create object
         emitter.emit                                //making noise, produce- signalling
-
+    -listener: event that will be called
+    -register listener
